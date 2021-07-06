@@ -1,0 +1,760 @@
+/* Affects entire document */
+html {
+    scroll-behavior: smooth; /* This ensures that the page scrolling is smooth when the nav bar is clicked */
+}
+  
+/* Body */
+body {
+    margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
+    opacity: 1; /* This and transition affect the page loading fade in effect */
+    transition: 3s opacity; /* This causes a 3 second fade in*/
+    letter-spacing: .2vw;
+    font-family: Avant Garde, Helvetica;
+    font-size: 9px;
+}
+  
+/* This section contributes to the fade effect for the page that occurs when the page is loaded */
+body.fade-out {
+    opacity: .1; /* This sets the level of opacity at the start of page load */
+    transition: none;
+}
+  
+/* Navbar */
+.Navbar {
+    overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
+    background-color: rgba(13, 183, 235, 0.87); /* This colors the navbar a slightly transparent blue */
+    position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
+    top: 0; /* This ensures no space is displayed above the navbar */
+    width: 100%; /* This makes the navbar span the entire width of the page */
+    z-index: 1; /*This ensures other elements don't display over the navbar */
+    position: fixed;
+    -webkit-animation: moveNav 5s; /* Safari 4.0 - 8.0 */
+    animation: moveNav 5s;
+}
+  
+/* Navbar text */
+.Navbar a {
+    float: left; /* This specifies that the text floats on the left on the navbar */
+    display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
+    color: white; /* This is the font color for text on our navbar */
+    padding: .75vw 1vw; /* This adds padding around our text */
+    text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
+    font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
+    font-size: 1.5vw; /* This specifies the font size for text on our navbar */
+    text-align: center; /* This centers the text within its container */
+    position: relative;
+    -webkit-animation: movenavText 5.75s; /* Safari 4.0 - 8.0 */
+    animation: movenavText 5.75s;
+    letter-spacing: .2vw;
+}
+  
+/* The animation effect for moving the nav bar in from above the top of the screen upon page load */
+@keyframes moveNav {
+    from {left: -100vw;}
+    to {left: 0vw;}
+}
+
+/* The animation effect for moving the nav bar in from above the top of the screen upon page load */
+@keyframes movenavText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+
+/* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
+@keyframes movevideoText {
+    from {top: -100vw;}
+    to {top: 0px;}
+}
+  
+/* Navbar hover effect */
+.Navbar a:hover {
+    background-color: rgba(13, 146, 235, 0.884); /*  This defines the background color that will display when you hover over the text on the navbar */
+    color: white; /* This defines the font color that will display when you hover over the text on the navbar */ 
+    font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+    cursor: pointer;
+    -webkit-transition-duration: 1s; 
+    transition-duration: 1s;
+}
+
+/* Navbar home button */
+.Navbar a.active { /* The active selector styles a link */
+    background-color: darkgray !important;  /* This specifies the background color behind the Home button on the navbar */ 
+}
+  
+/* This causes the video to zoom out from a zoomed in position upon page load */
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1.5,1.5);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+  
+/* Video */
+#Typing_Video {
+    position: fixed; /* This fixes our video to the page  */
+    right: 0; /* This ensures no space between the edge of the video and the edge of the page */
+    bottom: 0; /* This ensures no space between the edge of the video and the edge of the page */
+    min-height: 100%; /* This ensures the video is displayed across the full height of the page */
+    top: 0;
+    z-index: -1;
+    animation: zoominoutsinglefeatured 5s;
+}
+  
+/* Text over the video */ 
+.Video_Text { 
+    background: rgba(13, 183, 235, 0.356); /* This provides a semi-transparent background for the text to sit over */
+    color: white; 
+    width: 100%;
+    padding-top: .1vh; /* This adds padding around the text so that the background goes slightly beyond the text */
+    padding-bottom: 1vh;
+    margin-top: 23%;
+    position: relative;
+    -webkit-animation: moveNav 4s; /* Safari 4.0 - 8.0 */
+    animation: movevideoText 4s;
+}
+
+
+/* Slideshow Styling */
+#Slideshow_Background {
+    background:rgba(255,255,255, 0.35); /* This creates a slightly transparent white background that's placed over the video */
+}
+  
+  
+.mySlides {
+    display: none;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+/* Slideshow section / container */
+#Slideshow_Container {
+    width: 39.5vw;
+    height: auto;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+}
+  
+/* Images contained within slideshow */
+.Slide_Show_Images {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(13, 183, 235, 0.356);
+    width: auto;
+}
+  
+  
+/* Next and previous buttons */
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    margin-top: -0vw;
+    color: darkgray;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+}
+  
+/* Positioning the right-hand next button */
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* Hover effect on slide show buttons */
+.Previous:hover, .Next:hover {
+    background-color: rgba(13, 183, 235, 0.356);
+    color: white;
+}
+  
+/* Slideshow text */
+.text {
+    color: white;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw; 
+    font-size: 1.5vw;
+    background-color: rgba(13, 183, 235, 0.356);
+    font-weight: bold;
+    border-radius: 7px 7px 7px 7px;
+}
+  
+/* Number text (1/6, 2/6, etc.) - we have set this display to none, which means these are hidden */
+.Slide_Number {
+    color: white;
+    position: absolute;
+    top: 0;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw; 
+    font-size: 1.5vw;
+    font-weight: bold;
+    display: none;
+}
+  
+/* The dots under the slideshow */
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: rgb(13, 167, 214);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    z-index: 1;
+}
+  
+/* Hover effect for slideshow dots */ 
+.active, .dot:hover {
+    background-color: white;
+}
+  
+  /* Fading animation for slideshow */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;  
+  }
+  
+/* Table - this section covers the styling of the columns and rows within our table */
+* { /* The asterisk is a universal selector that applies this effect to all elements on the page */
+    box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
+}
+  
+.Column_1 {
+    flex: 50%;  
+    padding: 1.6%; 
+    background-color: #4d4d4d; 
+    height: 100%; 
+}
+  
+.Column_2 {
+    flex: 50%;
+    padding: 1.6%;
+    height: 100%; 
+    background-color: rgb(13, 167, 214);
+}
+
+.Row {
+    height: 350px;
+    display:flex;
+    flex-wrap:wrap;
+    content:"";
+    clear:both;
+}
+
+
+
+/*.Row:after {*/ /* This inserts something after the content of selected elements */
+    /*content: "";*/ /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+    /*display: table;*/ /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+    /*clear: both;*/ /* This clears any other elements from floating on the left or the right of an element */
+/*}*/
+  
+/* Heading 1 elements */
+h1 {
+    text-transform: uppercase; /* We are capitalizing our headings */
+    font-family: "Trebuchet MS", Optima; 
+    text-align: center;
+    margin-top: 3%; /* We are adding a small margin above the headings */
+    color: white;
+}
+  
+/* Paragraph elements */
+p {
+    font-family: Perpetua, Rockwell Extra Bold;
+    text-align: justify;
+    letter-spacing: .1vw; /* This expands the text slightly */
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+  
+/* Center align elements - this embraces all centered text */
+center {
+    font-family: Perpetua, Rockwell Extra Bold;
+    text-align: center;
+    letter-spacing: .1vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+  
+/* Anchor elements */
+a {
+    color: rgb(13, 167, 214); /* We are ensuring all links are blue */
+}
+
+/* Quotation elements */
+q {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Image elements */
+.index_img {
+    filter: grayscale(75%); /* This rids our pictures of 75% of their color */
+    border-radius: 8px; /* This causes our images to have slightly rounded edges */
+    max-width: 100%;
+    height: 100%;
+    margin: auto auto auto auto;
+    display: block; /* By specifying block display we can ensure our images are able to be centered */
+}
+  
+/* Center align element hover effect */
+center:hover {
+    transition: transform 2s;
+    transform: scale(1.1);
+}
+
+/* Paragraph element hover effect */
+p:hover {
+    color: white;	
+    transition: transform 1s;
+    transform: scale(1.01);
+}
+  
+/* Heading 1 element hover effect */
+h1:hover {
+    color: white;
+    font-weight: normal; /* Makes the text no longer bold when hovered over */ 
+
+}
+
+/* Image element hover effects */
+.index_img:hover {
+    filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
+    transition: transform 1s;
+    transform: scale(1.1);
+}
+  
+/* Contact form styling */
+
+/* Makes contact form button slide in from right on page load */
+@keyframes movePopup {
+    from {right: -40vw;}
+    to {bottom: 1.75vw;}
+}
+  
+/* Button used to open the contact form - fixed at the bottom of the page */
+.Pop_Up_Button {
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;  
+    background-color: rgb(13, 167, 214);
+    color: white;
+    border: solid;
+    cursor: pointer;
+    position: fixed;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;
+    z-index: 8;
+}
+  
+/* The popup form - hidden by default */
+.form-popup {
+    border: 3px solid #f0f1f0;
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
+}
+  
+/* Form styling */
+.form-container {
+    max-width: 49vw;
+    padding: 9px;
+    background-color: rgb(13, 167, 214);
+}
+  
+/* Input fields */
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    border: none;
+    background: Gainsboro;
+    font-family: Helvetica, Avant Garde;
+    font-size: 1vw; 
+}
+  
+/* Submit button */
+.form-container .btn {
+    background-color: white;
+    color: black;
+    border-color: black;
+    margin-bottom:1vh;
+}
+  
+/* Close button */
+.form-container .cancel {
+    background-color: black;
+    color: white;
+    border-color: gray;
+}
+  
+/* Button styling */
+button {
+    font-family: "Trebuchet MS", Optima; 
+    letter-spacing: .3vw; 
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1.5vw 1.5vw;
+    border-style: solid;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+  
+/* Hover effect for buttons */
+button:hover, .form-container .btn:hover{
+    color: rgb(13, 167, 214);
+    background-color: black;
+    -webkit-transition-duration: 1s; 
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: silver;
+}
+
+.form-container .cancel:hover{
+    color: white;
+    background-color: darkred;
+    -webkit-transition-duration: 1s; 
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: black;
+}	
+  
+/* Footer element */
+footer {
+    padding: 2%;
+    background-color:rgba(0, 0, 0, 0.884);
+}
+
+/* RESUME */
+#Resume_body {
+    background-color: #4d4d4d;
+}
+
+#Nav_Res {
+    background-color: rgba(255, 0, 81, 0.87);
+}
+
+#Nav_Res a:hover {
+    background-color: rgba(255, 0, 131, 0.88);
+}
+
+#vidTxt_Res {
+    background-color: rgba(255, 0, 81, 0.356);
+    margin-top: 5%;
+}
+
+.Resume_Col2 {
+    background-color: rgba(255, 0, 81, 0.87);
+}
+
+.Resume_Contact {
+    background-color: rgb(255, 0, 81);
+}
+
+.Resume_Button {
+    background-color: rgb(255, 0, 81);
+}
+
+#Submit_Res:hover, .Resume_Button:hover {
+    color: rgb(255, 0, 81);
+}
+
+.list_flex{
+    flex-wrap:wrap;
+    display:flex;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: white;
+}
+.list_left{
+    flex:50%;
+}
+
+.list_right{
+    flex:50%;
+}
+
+h2 {
+    text-transform: uppercase; /* We are capitalizing our headings */
+    font-family: "Trebuchet MS", Optima;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+.Resume_head {
+    color: rgb(255, 0, 81);
+}
+
+.vidTxt_Head {
+    background-color: #4d4d4d;
+    margin-top: 50px;
+}
+
+.Column_3 {
+    flex: 100%;
+    padding: 1.6%;
+    height: 100%;
+}
+
+.list_third{
+    flex: 33%;
+}
+
+#pad_z{
+    margin-top: 0px;
+}
+
+.Resume_Col1 {
+    background-color: rgba(122, 122, 122, 0.87);
+}
+h4, h5{
+    display:inline;
+    color:white;
+}
+
+.Large_row{
+    height:400px;
+}
+.work_history{
+    color:white;
+    font-size:7px;
+    text-align:left;
+    margin:0px;
+    padding: 0px;
+}
+
+.Education{
+    color:white;
+    text-align: left;
+    margin: 0px;
+    padding:0px;
+    font-family: "Avant Garde", Helvetica;
+}
+
+.padRemove{
+    padding-left:0px;
+}
+
+.text_Res {
+    background-color: rgba(255, 0, 81, 0.356);
+}
+
+.Previous_res:hover, .Next_res:hover {
+    background-color: rgba(255, 0, 81, 0.356);
+    color: white;
+}
+
+.ResShow_img {
+    box-shadow: 0px 5px 10px 12px rgba(255, 0, 81, 0.356);
+}
+.Code_flex {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.flexed{
+    flex:50%;
+}
+
+#non_tech {
+    height: 100px;
+}
+/*******************************************************************************************
+************************** Media Querries **************************************************
+*******************************************************************************************/
+@media only screen and (max-width: 479px) {
+    center {
+        padding-left: 0.5px;
+        padding-right: 0.5px;
+    }
+    p{
+        color:white;
+    }
+    .Column_1, .Column_2{
+        height:50%;
+    }
+    .Row{
+        flex-direction:column;
+    }
+    #GitHub, #Resume{
+        flex-direction:column-reverse;
+    }
+    .Code_flex {
+        flex-direction: column;
+    }
+    .flexed{
+        flex:none;
+        display:grid;
+    }
+    .technical{
+        margin-left: 13.75%
+    }
+    .switch {
+        background-color: rgba(255, 0, 81, 0.87);
+    }
+    .switch2 {
+        background-color: rgba(122, 122, 122, 0.87);
+    }
+    .Large_row{
+        height:250px;
+    }
+    .phone{
+        height: 250px;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    body {
+        font-size: 11px;
+    }
+    .work_history{
+        font-size: 9px;
+    }
+    .Row {
+        height: 225px;
+    }
+    .Large_row{
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width: 561px) {
+    body {
+        font-size: 13px;
+    }
+    .work_history{
+        font-size: 11px;
+    }
+    .Row {
+        height: 250px;
+    }
+    .Large_row {
+        height: 350px;
+    }
+}
+
+@media only screen and (min-width: 643px) {
+    body {
+        font-size: 15px;
+    }
+    .work_history {
+        font-size: 13px;
+    }
+    .Row {
+        height: 300px;
+    }
+    .Large_row {
+        height: 400px;
+    }
+}
+
+@media only screen and (min-width: 726px) {
+    body {
+        font-size: 17px;
+    }
+    .work_history {
+        font-size: 15px;
+    }
+    .Row {
+        height: 350px;
+    }
+    .Large_row {
+        height: 450px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    body {
+        font-size: 1.75vw;
+    }
+    .work_history {
+        font-size: 1.5vw;
+    }
+    .list_flex {
+        padding-left: 24.528px;
+        padding-right: 24.528px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .Row {
+        height: 400px;
+    }
+    .Large_row {
+        height: 500px;
+    }
+    #non_tech {
+        height: 150px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .Row {
+        height: 450px;
+    }
+    .Large_row {
+        height: 550px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .Row {
+        height: 500px;
+    }
+    .Large_row {
+        height: 600px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .Row {
+        height: 600px;
+    }
+    .Large_row {
+        height: 700px;
+    }
+    #non_tech {
+        height: 175px;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .Row {
+        height: 850px;
+    }
+    .Large_row {
+        height: 1000px;
+    }
+    #non_tech {
+        height: 200px;
+    }
+}

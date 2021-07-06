@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume</title>
+    <link rel="stylesheet" type="text/css" href="./StyleSheet/Portfolio.css">
+    <script src="./JavaScript/portfolio.js"></script>
+
+</head>
+<body id="Resume_body">
+
+    <div class="Navbar" id="Nav_Res">
+
+        <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a> <!-- This is a new section -->
+        <a href="./index.html">Back To Portfolio</a>
+        <!-- This makes it so that our openForm function runs when we click Contact on the nav bar -->
+
+    </div>
+
+    <div id="Home">
+
+        <br>
+        <br>
+        <video autoplay muted loop id="Typing_Video">
+            <!-- Makes the video play automatically, on a loop and with no sound -->
+            <source src="./StyleSheet/video/Typing.mp4" type="video/mp4">
+            Your browser does not support HTML5 video. <!-- Display message if video fails to run -->
+        </video>
+
+    </div>
+
+    <div class="Video_Text" id="vidTxt_Res">
+
+        <h1 style="color:white;">Isaiah Johnson</h1>
+        <p>
+            <center>
+                <strong>
+
+                    Software Developer with a strong understanding of core programming concepts
+                    familiarized with a wide range of programming languages and concepts.
+                    Always looking to improve my skillset and solve new problems I have not faced.
+
+                </strong>
+            </center>
+        </p>
+
+    </div>
+
+    <div class="Video_Text vidTxt_Head">
+        <h1 class="Resume_head">Technical Skills</h1>
+    </div>
+
+    <div id="Contact">
+
+        <button onclick="openForm_Res()" class="Pop_Up_Button Resume_Button"> CONTACT </button>
+        <div class="form-popup" id="myForm_Res">
+
+            <form action="https://formspree.io/Isaiahdj@gmail.com" method="POST" class="form-container Resume_Contact">
+                <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                <h1>Contact</h1>
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Type your name here" name="name" required>
+                <label for="phone"><b>Phone</b></label>
+                <input type="text" placeholder="Enter your phone number here" name="phone">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Type your email address here" name="email" required>
+                <label for="message"><b>Message</b></label>
+                <input type="text" placeholder="Type your message here" name="message">
+
+                <button type="submit" class="btn" id="Submit_Res">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm_Res()">CLOSE</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="Row" id="Summary">
+        <div class="Column_3 Resume_Col2 Code_flex">
+            <div class="flexed">
+                <h2>Programming Languages</h2>
+                <div class="list_flex technical">
+                    <ul class="list_left">
+                        <li>
+                            C#
+                        </li>
+                        <li>
+                            CSS
+                        </li>
+                        <li>
+                            Python
+                        </li>
+                    </ul>
+                    <ul class="list_right">
+                        <li>
+                            HTML
+                        </li>
+                        <li>
+                            JavaScript
+                        </li>
+                        <li>
+                            SQL
+                        </li>
+                    </ul>
+                </div>
+                <h2>Frameworks</h2>
+                <div class="list_flex technical">
+                    <ul class="list_left">
+                        <li>
+                            Bootstrap
+                        </li>
+                        <li>
+                            jQuerry
+                        </li>
+                    </ul>
+                    <ul class="list_right">
+                        <li>
+                            ASP.NET / MVC
+                        </li>
+                        <li class="liRes">
+                            Entity Framework
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flexed">
+                <h2>Database Technologies</h2>
+                <div class="list_flex technical">
+                    <ul class="list_left">
+                        <li>
+                            MySQL
+                        </li>
+                    </ul>
+                    <ul class="list_right">
+                        <li>
+                            MS SQL Server
+                        </li>
+                    </ul>
+                </div>
+                <h2>IDE</h2>
+                <div class="list_flex technical">
+                    <ul class="list_left">
+                        <li>
+                            Visual Studio
+                        </li>
+                    </ul>
+                    <ul class="list_right">
+                        <li>
+                            PyCharm
+                        </li>
+                    </ul>
+                </div>
+                <h2>Team skills</h2>
+                <div class="list_flex technical">
+                    <ul class="list_left">
+                        <li>
+                            Azure / DevOps
+                        </li>
+                    </ul>
+                    <ul class="list_right">
+                        <li>
+                            Agile / Scrum Methodolodgy
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Video_Text vidTxt_Head">
+        <h1 class="Resume_head">Non-Technical Skills</h1>
+    </div>
+
+    <div class="Row" id="non_tech">
+        <div class="Column_3 Resume_Col2">
+            <div class="list_flex">
+                <ul class="list_third">
+                    <li>Leadership / Management</li>
+                    <li>Team Player</li>
+                </ul>
+                <ul class="list_third">
+                    <li>Dependable</li>
+                    <li>Problem Solving</li>
+                </ul>
+                <ul class="list_third">
+                    <li>Strong Work Ethic</li>
+                    <li>Friendly</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="Slideshow">
+
+        <div id="Slideshow_Background">
+
+            <div id="Slideshow_Container">
+
+                <div class="mySlides fade">
+
+                    <div class="Slide_Number">1 / 6</div>
+                    <img class="Slide_Show_Images index_img ResShow_img" src=".\StyleSheet\Image\ResumeSlides\CSQuoteIndex.PNG" style="width:100%">
+                    <div class="text text_Res">Using ASP.NET MVC Archetecture to calculate car insurance. The Above image is from my index.cshtml</div>
+
+                </div>
+
+                <div class="mySlides fade">
+
+                    <div class="Slide_Number">2 / 6</div>
+                    <img class="Slide_Show_Images index_img ResShow_img" src=".\StyleSheet\Image\ResumeSlides\CSQuoteController.PNG" style="width:100%">
+                    <div class="text text_Res">This Code is C# Used in one of my controllers</div>
+
+                </div>
+
+                <div class="mySlides fade">
+
+                    <div class="Slide_Number">3 / 6</div>
+                    <img class="Slide_Show_Images index_img ResShow_img" src=".\StyleSheet\Image\ResumeSlides\PythonGui.PNG" style="width:100%">
+                    <div class="text text_Res">Using Tkinter in Python making a Graphical User Interface</div>
+
+                </div>
+
+                <div class="mySlides fade">
+
+                    <div class="Slide_Number">4 / 6</div>
+                    <img class="Slide_Show_Images index_img ResShow_img" src=".\StyleSheet\Image\ResumeSlides\PythonFunc.PNG" style="width:100%">
+                    <div class="text text_Res">Python functions that gets a files absolute path and transfer files using shutil to a different directory</div>
+
+                </div>
+
+                <div class="mySlides fade">
+
+                    <div class="Slide_Number">5 / 6</div>
+                    <img class="Slide_Show_Images index_img ResShow_img" src="./StyleSheet/Image/SQL_and_Database.jpg" style="width:100%">
+                    <div class="text text_Res">back end development, databases and SQL.</div>
+
+                </div>
+
+                <div class="mySlides fade">
+
+                    <div class="Slide_Number">6 / 6</div>
+                    <img class="Slide_Show_Images index_img ResShow_img" src="./StyleSheet/Image/Coding_1.jpg" style="width:100%">
+                    <div class="text text_Res">
+                        <a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+                    </div>
+
+                </div>
+
+                <a class="Previous Previous_res" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next Next_res" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+
+                <span class="dot text_Res" onclick="currentSlide(1)"></span>
+                <span class="dot text_Res" onclick="currentSlide(2)"></span>
+                <span class="dot text_Res" onclick="currentSlide(3)"></span>
+                <span class="dot text_Res" onclick="currentSlide(4)"></span>
+                <span class="dot text_Res" onclick="currentSlide(5)"></span>
+                <span class="dot text_Res" onclick="currentSlide(6)"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+    </script>
+
+    <div class="Video_Text vidTxt_Head" id="pad_z">
+        <h1 class="Resume_head">Programming Experience</h1>
+    </div>
+
+    <div class="Row Large_row" id="Pro_exp">
+        <div class="Column_3 Resume_Col2">
+            <div class="list_flex">
+                <ul>
+                    <li>
+                        As part of a team we created a working multipage website
+                        using asp.core/MVC and entity framework code first methodology.
+                        I focused mainly on making the website have more reactive styling
+                        using bootstrap and css media queries.
+                    </li>
+                    <li>
+                        Using C# in asp.net / MVC created a simple webpage that calculated
+                        car insurance quotes based on the information given by the user.
+                        Because dealing with users made exception handling to insure valid
+                        info was passed through the code.
+
+                    </li>
+                    <li>
+                        Using python Django framework made a website that was part of a bigger Hobby website.
+                        I created an animal crossing hobby site that allowed people to post their designs (images)
+                        for animal crossing  and saved them to the database. I also used beautiful soup
+                        to scrape another website for animal crossing news, as well as all the styling.
+
+                    <li>
+                        Using python and tkinter I made an application that had a gui that allowed
+                        a user to move files from one directory to another and records when the file
+                        was last modified in a database.
+                    </li>
+                </ul>   `
+            </div>
+        </div>
+    </div>
+
+    <div class="Video_Text vidTxt_Head">
+        <h1 class="Resume_head">Work Experience</h1>
+    </div>
+
+    <div class="Row Large_row">
+        <div class="Column_2 Resume_Col2">
+            <p class="work_history">June 2019 - Present</p>
+            <h4>Prosper IT Consulting</h4><h5> - Software Developer</h5>
+            <div class="list_flex">
+                <ul>
+                    <li>
+                        Created websites using HTML and Styled them with CSS and Bootstrap.
+                    </li>
+                    <li>
+                        Backend programming using SQL.
+                    </li>
+                    <li>
+                        Programed applications and web applications using Python and dJango.
+                    </li>
+                    <li>
+                        Made MVC applications using C# on ASP.net and .Core.
+                    </li>
+                    <li>
+                        Programmed frontend have reactive styling using bootstrap columns and CSS media queries.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="Column_1 Resume_Col1">
+            <p class="work_history">June 2019 - Present</p>
+            <h4>Rainbow West</h4><h5> - Assitant Manager</h5>
+            <div class="list_flex">
+                <ul>
+                    <li>
+                        Leading team of retail staff
+                    </li>
+                    <li>
+                        Creating procedures used for closing / opening
+                    </li>
+                    <li>
+                        Developing spreadsheets to manage stores data
+                    </li>
+                    <li>
+                        Programming the register
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="Row phone">
+        <div class="Column_1 Resume_Col1 switch">
+            <p class="work_history">March 2018 - June 2019</p>
+            <h4>LifeWay</h4><h5> - Shift Lead</h5>
+            <div class="list_flex">
+                <ul>
+                    <li>
+                        Managing Employees
+                    </li>
+                    <li>
+                        Quality control
+                    </li>
+                    <li>
+                        Running Closing Reports
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="Column_2 Resume_Col2 switch2">
+            <img class="index_img" src="./StyleSheet/Image/Development.jpg" alt="Laptop">
+        </div>
+    </div>
+
+    <div class="Video_Text vidTxt_Head">
+        <h1 class="Resume_head">Education</h1>
+    </div>
+
+    <div class="Row phone">
+        <div class="Column_2 Resume_Col2">
+            <p class="work_history">June  2019 - July 2020</p>
+            <h4>Tech Academy, Portland / Remote</h4><h5> - Software Development</h5>
+            <div class="list_flex padRemove">
+                <p class="Education">
+                    Intensive, boot camp with more than 600 hours of instruction and hands-on work in:
+                </p>
+                <ul>
+                    <li>
+                        Fundamentals of Computer Science, HTML/CSS, JavaScript, C#,
+                        Python, ASP.Net, web application development, object-oriented programming,
+                        Agile/Scrum, source control, relational database design and management,
+                        SQL programming and more.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="Column_1 Resume_Col1">
+            <img class="index_img" src="./StyleSheet/Image/Bootcamp.jpg" alt="Tech Academy">
+        </div>
+    </div>
+
+    <footer>
+        <p class="Education">
+            Download and print a copy of my resume by clicking: <a href="https://docs.google.com/document/d/1nRfQwhS3C7fkijCunMxUaqKp175IUl2G9PWbt_KikPg/edit?usp=sharing">Isaiah's Resume Doc</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
