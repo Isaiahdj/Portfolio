@@ -1,326 +1,216 @@
 <!DOCTYPE html>
 <html>
-
-<!-- Head -->
-	<head>
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Isaiah Johnson</title>
-		<link rel="stylesheet" type="text/css" href="./StyleSheet/Portfolio.css">
-		<script src="./JavaScript/portfolio.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- We use a little bit of jQuery on this site now -->
     
+    <!-- Head -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Isaiah Johnson</title>
+        <link rel="stylesheet" type="text/css" href="./StyleSheet/Portfolio.css">
     </head>
 
     <!-- Body -->
-    <body class="Background"> 
-    
-        <!-- Fade in effect -->
-        <script> 
-        
-       /* <!-- This script and function controls our fade in effect -->*/
-        document.body.className += 'fade-out';
-            $(function() {
-            $('body').removeClass('fade-out');
-
-        </script>
+    <body class="Background">   
 
         <!-- Navbar -->
         <div class="Navbar">
-
             <a class="active" href="#Home">Home</a>
-            <a href="#Slideshow">Slideshow</a> <!-- This is a new section -->
+            <!-- New section added -->
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
             <a href="#LinkedIn">LinkedIn</a>
             <a href="#Resume">Resume</a>
-            <a onclick="openForm()">Contact</a> <!-- This makes it so that our openForm function runs when we click Contact on the nav bar -->
-
+            <!-- Onclick and ondblclick functions added to open and close the contact form -->
+            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
         </div>
 
-        <!-- This allows us to close the form when we click outside the nav bar or contact form -->
-        <div class="btn cancel" onclick="closeForm()">
-
-            <!-- Home -->
-            <div id="Home">
-
-                <br> <!-- Breaks inserted to add space between navbar and first heading -->
-                <br>
-
-                <!-- Video -->
-                <video autoplay muted loop id="Typing_Video">
-                    <!-- Makes the video play automatically, on a loop and with no sound -->
-                    <source src="./StyleSheet/video/Typing.mp4" type="video/mp4">
-                    Your browser does not support HTML5 video. <!-- Display message if video fails to run -->
-                </video>
-
-            </div>
-
-            <!-- Video text -->
-            <div class="Video_Text">
-
-                <h1 style="color:white;">Isaiah's Portfolio</h1>
-                <p>
-                    <center>
-                        <strong>
-
-                            <q>
-                                The computer programmer is a creator of universes for which he alone is the lawgiver.
-                                <br>No playwright, no stage director, no emperor, however powerful,
-                                <br>has ever exercised such absolute authority to arrange a stage
-                                <br>or field of battle and to command such unswervingly
-                                <br>dutiful actors or troops.
-                            </q>
-                            <br>-Joseph Weizenbaum<br>
-                            <br>
-                            My name is Isaiah Johnson, Welcome to my portfolio website. <br>
-                            On it, I will tell you about my background and experience.<br>
-                            <br>Thank you for stopping by, I recommend visiting both my GitHub<br>
-                            and my LinkedIn, also feel free to look at my resume.<br>
-                            Thanks for stopping by, enjoy!
-
-                        </strong>
-                    </center>
-                </p>
-
-            </div>
-
-            <!-- Slideshow section -->
-            <div id="Slideshow">
-
-                <div id="Slideshow_Background">
-
-                    <div id="Slideshow_Container">
-
-                        <div class="mySlides fade">
-
-                            <div class="Slide_Number">1 / 6</div>
-                            <img class="Slide_Show_Images index_img" src="./StyleSheet/Image/Me.jpg" style="width:100%">
-                            <div class="text">I'm available to assist you on your project!</div>
-
-                        </div>
-
-                        <div class="mySlides fade">
-
-                            <div class="Slide_Number">2 / 6</div>
-                            <img class="Slide_Show_Images index_img" src="./StyleSheet/Image/HTML_CSS_and_JavaScript.jpeg" style="width:100%">
-                            <div class="text">I am a full-stack software developer,<br>trained in:<br>HTML, CSS, JavaScript,</div>
-
-                        </div>
-
-                        <div class="mySlides fade">
-
-                            <div class="Slide_Number">3 / 6</div>
-                            <img class="Slide_Show_Images index_img" src="./StyleSheet/Image/Python.png" style="width:100%">
-                            <div class="text">the popular programming language Python,</div>
-
-                        </div>
-
-                        <div class="mySlides fade">
-
-                            <div class="Slide_Number">4 / 6</div>
-                            <img class="Slide_Show_Images index_img" src="./StyleSheet/Image/C_Sharp_and_Dot_NET.png" style="width:100%">
-                            <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
-
-                        </div>
-
-                        <div class="mySlides fade">
-
-                            <div class="Slide_Number">5 / 6</div>
-                            <img class="Slide_Show_Images index_img" src="./StyleSheet/Image/SQL_and_Database.jpg" style="width:100%">
-                            <div class="text">back end development, databases and SQL.</div>
-
-                        </div>
-
-                        <div class="mySlides fade">
-
-                            <div class="Slide_Number">6 / 6</div>
-                            <img class="Slide_Show_Images index_img" src="./StyleSheet/Image/Coding_1.jpg" style="width:100%">
-                            <div class="text">
-                                <a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
-                            </div>
-
-                        </div>
-
-                        <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="Next" onclick="plusSlides(1)">&#10095;</a>
-
-                    </div>
-                    <br>
-
-                    <div style="text-align:center">
-
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
-                        <span class="dot" onclick="currentSlide(5)"></span>
-                        <span class="dot" onclick="currentSlide(6)"></span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- We included our JS function within this file to ensure it was given precedence, this function covers the slideshow -->
-            <script>
-
-                var slideIndex = 1;
-                showSlides(slideIndex);
-                function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                }
-                function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                }
-                function showSlides(n) {
-                    var i;
-                    var slides = document.getElementsByClassName("mySlides");
-                    var dots = document.getElementsByClassName("dot");
-                    if (n > slides.length) { slideIndex = 1 }
-                    if (n < 1) { slideIndex = slides.length }
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                    slides[slideIndex - 1].style.display = "block";
-                    dots[slideIndex - 1].className += " active";
-                }
-
-            </script>
-
-            <!-- About section -->
-            <div class="Row" id="About">
-
-                <div class="Column_2">
-                    <!-- Left column -->
-
-                    <img class="index_img" src="./StyleSheet/Image/Development.jpg" alt="Laptop">
-
-                </div>
-
-                <div class="Column_1" id="About_txt">
-                    <!-- Right column -->
-
-                    <h1>About</h1>
-                    <p>
-                        I am 22 years old and I really enjoy learning new programming skills and using those skills to program.
-                        <br><br>I am a former student of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s
-                        Software Developer Boot Camp, and have learned the basics to: HTML, CSS, JavaScript, Python and C# .<br>
-                        <br>I am a developer in training and would love to work and gain more experience with coding <a href="#Contact">Contact</a> me below!
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- GitHub section -->
-            <div class="Row" id="GitHub">
-
-                <div class="Column_1" id="Github_txt">
-                    <!-- Left column -->
-
-                    <h1>GitHub</h1>
-                    <p>
-                        I have done many projects with Html and Css, JavaScript, Sql, Python and C#
-                        <br><br>You can view my coding projects on my GitHub profile here:
-                        <center><a href="https://github.com/Isaiahdj" target="_blank">Isaiah Johnson GitHub</a></center>
-                    </p>
-
-                </div>
-
-                <div class="Column_2">
-                    <!-- Right column -->
-
-                    <a href="https://github.com/Isaiahdj" target="_blank"><img class="index_img" src="./StyleSheet/Image/GitHub.png" alt="GitHub"></a>
-
-                </div>
-
-            </div>
-
-            <div class="Row" id="LinkedIn">
-
-                <div class="Column_2">
-                    <!-- Left column -->
-                    <a href="https://linkedin.com/in/isaiahdj" target="_blank"><img class="index_img" src="./StyleSheet/Image/LinkedIn.png" alt="LinkedIn"></a>
-
-
-                </div>
-
-                <div class="Column_1" id="LinkedIn_txt">
-                    <!-- Right column -->
-                    <h1>LinkedIn</h1>
-                    <p>
-                        Visit me on LinkedIn: <a href="https://linkedin.com/in/isaiahdj" target="_blank">Isaiah Johnson LinkedIn</a>
-                        This is a good way to find out more about me and to contact me.
-                    </p>
-
-
-                </div>
-
-            </div>
-
-            <div class="Row" id="Resume">
-
-                <div class="Column_1" id="Resume_txt">
-                    <!-- Left column -->
-
-                    <h1>Resume</h1>
-                    <p>
-                        Check out the site form of my Resume: <a href="./Resume.html">Isaiah Johnson Resume</a>
-                        Here you can look at my resume, and download a pdf form of it.
-                    </p>
-
-                </div>
-
-                <div class="Column_2">
-                    <!-- Right column -->
-
-                    <a href="./Resume.html" target="_blank"><img class="index_img" src="./StyleSheet/Image/Resume_pic.PNG" alt="Resume"></a>
-
-                </div>
-
-            </div>
-
+        <!-- Background video -->
+        <div id="Home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="./StyleSheet/video/Typing.mp4" type="video/mp4">
+                <!-- Display message if video fails to run -->
+                Your browser does not support HTML5 video.
+            </video>
         </div>
 
-        <!-- Contact section -->
-        <div id="Contact"> 
-            
-            <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
-            <div class="form-popup" id="myForm">
+        <!-- Video text -->
+        <div class="Video_Text">
+            <h1 class="white-text">Isaiah's Portfolio</h1>
+            <center>
+                <strong>
                 
-                <form action="https://formspree.io/Isaiahdj@gmail.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                    <q>
+                        The computer programmer is a creator of universes for which he alone is the lawgiver.
+                        <br>No playwright, no stage director, no emperor, however powerful,
+                        <br>has ever exercised such absolute authority to arrange a stage
+                        <br>or field of battle and to command such unswervingly
+                        <br>dutiful actors or troops.
+                    </q>
+                    <br>-Joseph Weizenbaum<br>
+                    <br>
+                    My name is Isaiah Johnson, Welcome to my portfolio website. <br>
+                    On it, I will tell you about my background and experience.<br>
+                    <br>Thank you for stopping by, I recommend visiting both my GitHub<br>
+                    and my LinkedIn, also feel free to look at my resume.<br>
+                    Thanks for stopping by, enjoy!
+                
+                </strong>
+            </center>
+        </div>
+
+        <!-- Slideshow section added -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 6 -->
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">1 / 6</div>
+                        <img class="Slide_Show_Images index_img" src="./StyleSheet/Image/Me.jpg" alt="Picture of me" style="width:100%">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- Slide 2 of 6 -->
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">2 / 6</div>
+                        <img class="Slide_Show_Images index_img" src="./StyleSheet/Image/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos" style="width:100%"> 
+                        <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+                    <!-- Slide 3 of 6 -->
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">3 / 6</div>
+                        <img class="Slide_Show_Images index_img" src="./StyleSheet/Image/Python.png" alt="Python logo" style="width:100%">
+                        <div class="text">the popular programming language Python,</div>
+                    </div>
+                    <!-- Slide 4 of 6 -->
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">4 / 6</div>
+                        <img class="Slide_Show_Images index_img" src="./StyleSheet/Image/C_Sharp_and_Dot_NET.png" alt="C# logo" style="width:100%">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                    </div>
+                    <!-- Slide 5 of 6 -->
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">5 / 6</div>
+                        <img class="Slide_Show_Images index_img" src="./StyleSheet/Image/SQL_and_Database.jpg" alt="SQL logo" style="width:100%"> 
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+                    <!-- Slide 6 of 6 -->
+                    <div class="mySlides fade">
+                        <div class="Slide_Number">6 / 6</div>
+                        <img class="Slide_Show_Images index_img" src="./StyleSheet/Image/Coding_1.jpg" style="width:100%"> 
+                        <div class="text"><a class="white-text" onclick="openForm()" href="#Contact">Contact me now!</a></div> 
+                    </div>
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- Adds a space between the slideshow images and the dots -->
+
+                <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="Row" id="About">
+            <!-- Left column -->
+            <div class="Column_2">
+                <img class="index_img" src="./StyleSheet/Image/Development.jpg" alt="Laptop">
+            </div>
+            <!-- Right column -->
+            <div class="Column_1" id="About_txt">
+                <h1>About</h1>
+                <p>
+                    I am 23 years old and I really enjoy learning new programming skills and using those skills to program.
+                    <br><br>I am a former student of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s
+                    Software Developer Boot Camp, and have learned the basics to: HTML, CSS, JavaScript, Python and C# .<br>
+                    <br>I am a developer in training and would love to work and gain more experience with coding <a href="#Contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <!-- GitHub section -->
+        <div class="Row" id="GitHub">
+            <!-- Left column -->
+            <div class="Column_1" id="Github_txt">
+                <h1>GitHub</h1>
+                <p> 
+                    I have done many projects with Html and Css, JavaScript, Sql, Python and C#
+                    <br><br>You can view my coding projects on my GitHub profile here:
+                    <center><a href="https://github.com/Isaiahdj" target="_blank">Isaiah Johnson GitHub</a></center>
+                </p>
+            </div>
+            <!-- Right column -->
+            <div class="Column_2">
+                <a href="https://github.com/Isaiahdj" target="_blank"><img class="index_img" src="./StyleSheet/Image/GitHub.png" alt="GitHub"></a>
+            </div>
+        </div>
+
+        <!-- LinkedIn Section -->
+        <div class="Row" id="LinkedIn">
+             <!-- Left column -->
+            <div class="Column_2">
+                <a href="https://linkedin.com/in/isaiahdj" target="_blank"><img class="index_img" src="./StyleSheet/Image/LinkedIn.png" alt="LinkedIn"></a>
+            </div>
+            <!-- Right column -->
+            <div class="Column_1" id="LinkedIn_txt">
+                <h1>LinkedIn</h1>
+                <p>
+                    Visit me on LinkedIn: <a href="https://linkedin.com/in/isaiahdj" target="_blank">Isaiah Johnson LinkedIn</a>
+                    This is a good way to find out more about me and to contact me.
+                </p>
+            </div>
+        </div>
+
+        <!-- Resume Section -->
+        <div class="Row" id="Resume">
+            <!-- Left column -->
+            <div class="Column_1" id="Resume_txt">
+                <h1>Resume</h1>
+                <p>
+                    Check out the site form of my Resume: <a href="./Resume.html">Isaiah Johnson Resume</a>
+                    Here you can look at my resume, and download a pdf form of it.
+                </p>
+            </div>
+            <!-- Right column -->
+            <div class="Column_2">
+                <a href="./Resume.html" target="_blank"><img class="index_img" src="./StyleSheet/Image/Resume_pic.PNG" alt="Resume"></a>
+            </div>
+        </div>
+
+        <!-- Contact form -->
+        <div id="Contact">
+           <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+           <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/Isaiahdj@gmail.com" method="POST" class="form-container">
                     <h1>Contact</h1>
                     <label for="name"><b>Name</b></label>
-                    <input type="text" placeholder="Type your name here" name="name" required>
+                      <input type="text" placeholder="Type your name here" name="name" required>
                     <label for="phone"><b>Phone</b></label>
-                    <input type="text" placeholder="Enter your phone number here" name="phone">
+                      <input type="text" placeholder="Type your phone number here" name="phone">
                     <label for="email"><b>Email</b></label>		
-                    <input type="text" placeholder="Type your email address here" name="email" required>
+                      <input type="text" placeholder="Type your email address here" name="email" required>
                     <label for="message"><b>Message</b></label>
-                    <input type="text" placeholder="Type your message here" name="message">
-        
+                      <input type="text" placeholder="Type your message here" name="message">
+         
                     <button type="submit" class="btn">SUBMIT</button>
                     <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
-
-            </div>
-
+           </div>
         </div>
         
-        <!-- Footer section -->	
+        <!-- Footer section -->
         <footer>
             <p>
                 <center>&copy Isaiah Johnson</center><br>
             </p>
         </footer>
-
+        <script src="./JavaScript/portfolio.js"></script>
     </body>
-
 </html>
