@@ -246,7 +246,7 @@ body.fade-out {
 .Column_1 {
     flex: 50%;  
     padding: 1.6%; 
-    background-color: #4d4d4d; 
+    background-color: rgba(77, 77, 77, 0.87); 
     height: 100%; 
 }
   
@@ -254,7 +254,7 @@ body.fade-out {
     flex: 50%;
     padding: 1.6%;
     height: 100%; 
-    background-color: rgb(13, 167, 214);
+    background-color: rgba(13, 167, 214,.87);
 }
 
 .Row {
@@ -649,7 +649,7 @@ h4, h5{
 
 @media only screen and (min-width: 561px) {
     body {
-        font-size: 13px;
+        font-size: 12px;
     }
     .work_history{
         font-size: 11px;
